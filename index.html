@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Vue - TodoList</title>
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
@@ -103,9 +103,9 @@
         notes: []
       },
       mounted() {
-        //  取得資料
-        todoRef.on('value', function(snapshot) {
-          app.notes = snapshot.val();
+        //  取得firebase上的資料
+        todoRef.on('value', function(firelist) {
+          app.notes = firelist.val();
           // console.log(app.notes);
         });
       },
