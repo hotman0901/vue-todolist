@@ -40,6 +40,13 @@
       margin-top: 8px;
       display: block;
     }
+
+    .text-content
+    {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
   </style>
 </head>
 
@@ -69,7 +76,7 @@
           <div class="card-block">
             <h6 class="card-subtitle">{{note.date}}</h6>
             <h4 class="card-title">{{note.title}}</h4>
-            <p>{{note.text}}</p>
+            <p class="text-content">{{note.text}}</p>
           </div>
         </div>
       </div>
